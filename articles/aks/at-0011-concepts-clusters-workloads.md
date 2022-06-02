@@ -36,7 +36,7 @@ This article introduces:
 
 ## Kubernetes cluster architecture
 
-A Kubernetes cluster is divided into two components:
+A **Kubernetes cluster is divided into two components**:
 
 - *Control plane*: provides the core Kubernetes services and orchestration of application workloads.
 - *Nodes*: run your application workloads.
@@ -45,13 +45,16 @@ A Kubernetes cluster is divided into two components:
 
 ## Control plane
 
-When you create an AKS cluster, a control plane is automatically created and configured. This control plane is provided at no cost as a managed Azure resource abstracted from the user. You only pay for the nodes attached to the AKS cluster. The control plane and its resources reside only on the region where you created the cluster.
+- When you create an AKS cluster, a control plane is automatically created and configured.
+   - This control plane is provided at no cost as a managed Azure resource abstracted from the user.
+   - You only pay for the nodes attached to the AKS cluster.
+   - *The control plane and its resources reside only on the region where you created the cluster.*
 
 The control plane includes the following core Kubernetes components:
 
 | Component | Description |  
 | ----------------- | ------------- |  
-| *kube-apiserver*                                                                                 | The API server is how the underlying Kubernetes APIs are exposed. This component provides the interaction for management tools, such as `kubectl` or the Kubernetes dashboard.                                                        |  
+| *kube-apiserver*                                                                                 | - The API server is how the underlying Kubernetes APIs are exposed. - This component provides the interaction for management tools, such as `kubectl` or the Kubernetes dashboard.                                                        |  
 | *etcd* | To maintain the state of your Kubernetes cluster and configuration, the highly available *etcd* is a key value store within Kubernetes.                                      |  
 | *kube-scheduler*                                                                            | When you create or scale applications, the Scheduler determines what nodes can run the workload and starts them.                                                                                    |  
 | *kube-controller-manager*                                                                            | The Controller Manager oversees a number of smaller Controllers that perform actions such as replicating pods and handling node operations.                                                                  |  
