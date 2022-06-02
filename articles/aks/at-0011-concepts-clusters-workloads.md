@@ -24,13 +24,15 @@ This article introduces:
 
 ## What is Kubernetes?
 
-Kubernetes is a rapidly evolving platform that manages container-based applications and their associated networking and storage components. Kubernetes focuses on the application workloads, not the underlying infrastructure components. Kubernetes provides a declarative approach to deployments, backed by a robust set of APIs for management operations.
-
-You can build and run modern, portable, microservices-based applications, using Kubernetes to orchestrate and manage the availability of the application components. Kubernetes supports both stateless and stateful applications as teams progress through the adoption of microservices-based applications.
-
-As an open platform, Kubernetes allows you to build your applications with your preferred programming language, OS, libraries, or messaging bus. Existing continuous integration and continuous delivery (CI/CD) tools can integrate with Kubernetes to schedule and deploy releases.
-
-AKS provides a managed Kubernetes service that reduces the complexity of deployment and core management tasks, like upgrade coordination. The Azure platform manages the AKS control plane, and you only pay for the AKS nodes that run your applications.
+- Kubernetes **manages container-based applications and their associated networking and storage components**.
+- Kubernetes **focuses on the application workloads**, not the underlying infrastructure components.
+- Kubernetes **provides a declarative approach to deployments**, backed by a robust set of APIs for management operations.
+- Kubernetes **supports both stateless and stateful applications as teams progress** through the adoption of microservices-based applications.
+- Kubernetes is **used to build and run modern, portable, microservices-based applications**, by using Kubernetes to orchestrate and manage the availability of the application components.
+- As an **open platform**, Kubernetes allows you to build your applications with your preferred programming language, OS, libraries, or messaging bus.
+   - Existing continuous integration and continuous delivery (CI/CD) tools can integrate with Kubernetes to schedule and deploy releases.
+- AKS provides a **managed Kubernetes service** that reduces the complexity of deployment and core management tasks, like upgrade coordination.
+   - The Azure platform manages the AKS control plane, and you only pay for the AKS nodes that run your applications.
 
 ## Kubernetes cluster architecture
 
