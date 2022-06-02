@@ -1,10 +1,11 @@
 ---
-title: AT 0011 Concepts - Kubernetes basics for Azure Kubernetes Services (AKS)
-description: Learn the basic cluster and workload components of Kubernetes and how they relate to features in Azure Kubernetes Service (AKS)
+title: 0011 Concepts - Kubernetes basics for Azure Kubernetes Services (AKS)
+description: Learn the basic cluster and workload components of Kubernetes and how they
+  relate to features in Azure Kubernetes Service (AKS)
 services: container-service
 ms.topic: conceptual
 ms.date: 03/05/2020
-
+lastmod: 2022-06-02T11:42:08.335Z
 ---
 
 # Kubernetes core concepts for Azure Kubernetes Service (AKS)
@@ -41,7 +42,7 @@ A **Kubernetes cluster is divided into two components**:
 - *Control plane*: provides the core Kubernetes services and orchestration of application workloads.
 - *Nodes*: run your application workloads.
 
-![Kubernetes control plane and node components](media/concepts-clusters-workloads/control-plane-and-nodes.png)
+![Kubernetes control plane and node components](/docs/0011-aks-concepts/refs/azure-docs-aks/media/concepts-clusters-workloads/control-plane-and-nodes.png) ![](/media/concepts-clusters-workloads/control-plane-and-nodes.png)
 
 ## Control plane
 
@@ -78,7 +79,7 @@ To run your applications and supporting services, you need a Kubernetes *node*. 
 | *kube-proxy* | Handles virtual networking on each node. The proxy routes network traffic and manages IP addressing for services and pods. |  
 | *container runtime* | Allows containerized applications to run and interact with additional resources, such as the virtual network and storage. AKS clusters using Kubernetes version 1.19+ for Linux node pools use `containerd` as their container runtime. Beginning in Kubernetes version 1.20 for Windows node pools, `containerd` can be used in preview for the container runtime, but Docker is still the default container runtime. AKS clusters using prior versions of Kubernetes for node pools use Docker as their container runtime. |  
 
-![Azure virtual machine and supporting resources for a Kubernetes node](media/concepts-clusters-workloads/aks-node-resource-interactions.png)
+![Azure virtual machine and supporting resources for a Kubernetes node](/docs/0011-aks-concepts/refs/azure-docs-aks/media/concepts-clusters-workloads/aks-node-resource-interactions.png) ![](/media/concepts-clusters-workloads/aks-node-resource-interactions.png)
 
 The Azure VM size for your nodes defines the storage CPUs, memory, size, and type available (such as high-performance SSD or regular HDD). Plan the node size around whether your applications may require large amounts of CPU and memory or high-performance storage. Scale out the number of nodes in your AKS cluster to meet demand.
 
@@ -278,7 +279,7 @@ For more information, see [Kubernetes DaemonSets][kubernetes-daemonset].
 
 Kubernetes resources, such as pods and deployments, are logically grouped into a *namespace* to divide an AKS cluster and restrict create, view, or manage access to resources. For example, you can create namespaces to separate business groups. Users can only interact with resources within their assigned namespaces.
 
-![Kubernetes namespaces to logically divide resources and applications](media/concepts-clusters-workloads/namespaces.png)
+![Kubernetes namespaces to logically divide resources and applications](/docs/0011-aks-concepts/refs/azure-docs-aks/media/concepts-clusters-workloads/namespaces.png) ![](media/concepts-clusters-workloads/namespaces.png)
 
 When you create an AKS cluster, the following namespaces are available:
 
