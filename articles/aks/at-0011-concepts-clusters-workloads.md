@@ -54,18 +54,19 @@ The control plane includes the following core Kubernetes components:
 
 | Component | Description |  
 | ----------------- | ------------- |  
-| *kube-apiserver*                                                                                 | * The API server is how the underlying Kubernetes APIs are exposed. * This component provides the interaction for management tools, such as `kubectl` or the Kubernetes dashboard.                                                        |  
-| *etcd* | To maintain the state of your Kubernetes cluster and configuration, the highly available *etcd* is a key value store within Kubernetes.                                      |  
-| *kube-scheduler*                                                                            | When you create or scale applications, the Scheduler determines what nodes can run the workload and starts them.                                                                                    |  
-| *kube-controller-manager*                                                                            | The Controller Manager oversees a number of smaller Controllers that perform actions such as replicating pods and handling node operations.                                                                  |  
+| *kube-apiserver*                                                                                 | The API server is how the underlying Kubernetes APIs are exposed. *This component provides the interaction for management tools, such as `kubectl` or the Kubernetes dashboard.*                                                        |  
+| *etcd* | To maintain the state of your Kubernetes cluster and configuration, the highly available *etcd is a key value store within Kubernetes*.                                      |  
+| *kube-scheduler*                                                                            | When you create or scale applications, the *Scheduler determines what nodes can run the workload and starts them*.                                                                                    |  
+| *kube-controller-manager*                                                                            | The *Controller Manager oversees a number of smaller Controllers that perform actions such as replicating pods and handling node operations*.                                                                  |  
 
-AKS provides a single-tenant control plane, with a dedicated API server, scheduler, etc. You define the number and size of the nodes, and the Azure platform configures the secure communication between the control plane and nodes. Interaction with the control plane occurs through Kubernetes APIs, such as `kubectl` or the Kubernetes dashboard.
-
-While you don't need to configure components (like a highly available *etcd* store) with this managed control plane, you can't access the control plane directly. Kubernetes control plane and node upgrades are orchestrated through the Azure CLI or Azure portal. To troubleshoot possible issues, you can review the control plane logs through Azure Monitor logs.
-
-To configure or directly access a control plane, deploy a self-managed Kubernetes cluster using [Cluster API Provider Azure][cluster-api-provider-azure].
-
-For associated best practices, see [Best practices for cluster security and upgrades in AKS][operator-best-practices-cluster-security].
+- AKS provides a single-tenant control plane, with a dedicated API server, scheduler, etc.
+- You define the number and size of the nodes, and the Azure platform configures the secure communication between the control plane and nodes.
+- Interaction with the control plane occurs through Kubernetes APIs, such as `kubectl` or the Kubernetes dashboard.
+- While you don't need to configure components (like a highly available *etcd* store) with this managed control plane, **you can't access the control plane directly**.
+   - Kubernetes control plane and node upgrades are orchestrated through the Azure CLI or Azure portal.
+   - To troubleshoot possible issues, you can review the control plane logs through Azure Monitor logs.
+- To configure or directly access a control plane, deploy a self-managed Kubernetes cluster using [Cluster API Provider Azure][cluster-api-provider-azure].
+- For associated best practices, see [Best practices for cluster security and upgrades in AKS][operator-best-practices-cluster-security].
 
 ## Nodes and node pools
 
